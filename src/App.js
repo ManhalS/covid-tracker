@@ -1,8 +1,8 @@
 
 
-import Global from './compnents/Global'
+
 import Gstatus from './compnents/Gstatus'
-import Searchbar from './compnents/searchbr'
+import Searchbar from './compnents/Searchbar'
 import Usinfo from "./compnents/Usinfo"
 
 function App() {
@@ -12,7 +12,7 @@ function App() {
      <Searchbar/>
      <Gstatus/>
      <Usinfo/>
-     <Global/>
+     
     </div>
   );
 }
