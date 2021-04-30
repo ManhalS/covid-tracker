@@ -37,6 +37,7 @@ function Searchbar(props) {
         <div>
              <label>Search BY Country :</label><input type= "text" onChange={handleInput}  value={searchText} placeholder ="country name"></input>
              < button onClick={handlesubmit}> submit</button>
+             <searchresoults contry ={}
         </div>
     );
 }
