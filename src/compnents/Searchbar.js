@@ -14,13 +14,13 @@ function Searchbar(props) {
         console.log("button is working")
         fetch(searchText)
 }
-// fetch(`https://corona.lmao.ninja/v3/covid-19/countries/${searchText}`)
-//     .then(res=> res.json())
-//     .then((data) => {
-//        setGlobal( data)
-//         console.log(data)
+fetch(`https://corona.lmao.ninja/v3/covid-19/countries/${searchText}`)
+    .then(res=> res.json())
+    .then((data) => {
+       setGlobal( data)
+        console.log(data)
     
-    // })
+    },[])
 
 
     // useEffect(()  =>{
@@ -33,13 +33,18 @@ function Searchbar(props) {
     //         onSearch(searchText)
     //     }
     // }
+    const country = global?.map (conte =>{
     return (
         <div>
              <label>Search BY Country :</label><input type= "text" onChange={handleInput}  value={searchText} placeholder ="country name"></input>
              < button onClick={handlesubmit}> submit</button>
-             <searchresoults contry ={}
+             <h2>contry ={conte.country}
+              flag ={conte.flag}
+              cases={conte.cases}
+              active ={conte.active</h2>
+              console.log(conte)
         </div>
     );
 }
-
+    )}
 export default Searchbar;
