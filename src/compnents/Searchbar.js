@@ -1,12 +1,15 @@
 import React, { useState,useEffect } from 'react';
 
+
 function Searchbar(props) {
 
     
     const {onSearch}= props;
     const [searchText, setsearchText]= useState("")
     const [global , setGlobal ]= useState({})
+    
     const handleInput=(e)=>{
+      
         setsearchText(e.target.value)
         console.log(searchText)
     }
@@ -14,14 +17,15 @@ function Searchbar(props) {
         console.log("button is working")
         fetch(searchText)
 }
-fetch(`https://corona.lmao.ninja/v3/covid-19/countries/${searchText}`)
-    .then(res=> res.json())
-    .then((data) => {
-       setGlobal( data)
-        console.log(data)
-    
-    },[])
 
+useEffect(()  =>fetch(`https://corona.lmao.ninja/v3/covid-19/countries/${searchText}`)
+.then(res=> res.json())
+.then((data) => {
+    setGlobal( data)
+    console.log(data)
+    
+   
+  }),[])
 
     // useEffect(()  =>{
 
@@ -33,18 +37,17 @@ fetch(`https://corona.lmao.ninja/v3/covid-19/countries/${searchText}`)
     //         onSearch(searchText)
     //     }
     // }
-    const country = global?.map (conte =>{
+
+    // const country = global?.map (conte =>{
     return (
-        <div>
-             <label>Search BY Country :</label><input type= "text" onChange={handleInput}  value={searchText} placeholder ="country name"></input>
+        <div className="Search">
+           
+             <label id= "label">Search BY Country :</label><input type= "text" onChange={handleInput}  value={searchText} placeholder ="country name"></input>
              < button onClick={handlesubmit}> submit</button>
-             <h2>contry ={conte.country}
-              flag ={conte.flag}
-              cases={conte.cases}
-              active ={conte.active</h2>
-              console.log(conte)
+           
         </div>
     );
 }
-    )}
+    // )}
 export default Searchbar;
+

@@ -19,7 +19,7 @@ function Gstatus(props) {
       console.log(Gstatus)
       if (Gstatus){
     return (
-        <div>
+        <div className= "Ginfo">
       <h1>Global Covid Status </h1>
       <h2>cases: {Gstatus.cases} </h2> 
       <h2>active cases: {Gstatus.active}</h2>

@@ -19,10 +19,10 @@ function CoState(props) {
       console.log(CoState)
       const stateInfo = CoState?.map(state => { 
         return (
-            <div className ="State">
-               <h3> state:{state.state}</h3>
-               <h3> cases:{state.cases}</h3>
-               <h3>  total Death:{state.deaths}</h3>
+            <div >
+               <h3 className ='s1'> state: {state.state}</h3>
+               <h3 className ='s2'> cases: {state.cases}</h3>
+               <h3 className ='s3'> total Death: {state.deaths}</h3>
 
             </div>
         )
@@ -34,7 +34,7 @@ function CoState(props) {
             
             return(
                 <div className ="Usinfo">
-                    
+                    <h1 id ="hst"> States info</h1>
                     {stateInfo}
                 </div>
                 
