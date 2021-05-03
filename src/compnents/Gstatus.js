@@ -1,5 +1,6 @@
 import React from 'react';
 import {useState, useEffect} from "react"
+import { Card } from 'react-bootstrap';
 
 
 
@@ -19,13 +20,17 @@ function Gstatus(props) {
       console.log(Gstatus)
       if (Gstatus){
     return (
-        <div className= "Ginfo">
-      <h1>Global Covid Status </h1>
-      <h2>cases: {Gstatus.cases} </h2> 
-      <h2>active cases: {Gstatus.active}</h2>
-      <h2>critical:  {Gstatus.critical}</h2>
+        <div class="row" className= "Ginfo">
+      <h1 id ="gcs">Global Covid Status </h1>
+      <Card>
+
+      <h2>cases: {Gstatus.cases} </h2>
+     <h2>active cases: {Gstatus.active}</h2>
+     <h2>critical:  {Gstatus.critical}</h2>
+     <h2>recovered:{Gstatus.recovered}</h2>
       <h2>Death: {Gstatus.deaths}</h2>
-      <h2>recovered:{Gstatus.recovered}</h2>
+     
+      </Card>
         </div>
 
 )}

@@ -1,5 +1,6 @@
 import React, { useState,useEffect } from 'react';
-
+import {Button} from "react-bootstrap"
+import'bootstrap/dist/css/bootstrap.min.css'
 
 function Searchbar(props) {
 
@@ -43,7 +44,7 @@ useEffect(()  =>fetch(`https://corona.lmao.ninja/v3/covid-19/countries/${searchT
         <div className="Search">
            
              <label id= "label">Search BY Country :</label><input type= "text" onChange={handleInput}  value={searchText} placeholder ="country name"></input>
-             < button onClick={handlesubmit}> submit</button>
+             < Button onClick={handlesubmit}> submit</Button>
            
         </div>
     );
