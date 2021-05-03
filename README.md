@@ -9,5 +9,11 @@ this app is build with react
 
 
 
+
+
+
+
+
+
 issues:
 i had some issues with the search bar working on a slouthion as fast as i can
