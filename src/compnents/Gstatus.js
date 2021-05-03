@@ -24,11 +24,11 @@ function Gstatus(props) {
       <h1 id ="gcs">Global Covid Status </h1>
       <Card>
 
-      <h2>cases: {Gstatus.cases} </h2>
-     <h2>active cases: {Gstatus.active}</h2>
-     <h2>critical:  {Gstatus.critical}</h2>
-     <h2>recovered:{Gstatus.recovered}</h2>
-      <h2>Death: {Gstatus.deaths}</h2>
+    <h2 class="p-3 mb-2 bg-primary text-white">cases: {Gstatus.cases} </h2>
+    <h2 class="p-3 mb-2 bg-light text-dark">active cases: {Gstatus.active}</h2>
+    <h2 class="p-3 mb-2 bg-danger text-white">critical:  {Gstatus.critical}</h2>
+    <h2 class="p-3 mb-2 bg-success text-white" >recovered:{Gstatus.recovered}</h2>
+    <h2 class="p-3 mb-2 bg-warning text-dark">Death: {Gstatus.deaths}</h2>
      
       </Card>
         </div>

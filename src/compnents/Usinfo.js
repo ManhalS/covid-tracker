@@ -21,9 +21,9 @@ function CoState(props) {
             <div class ="row"  >
             <Card>
                 <ul>
-               <h3  className ='s1'> state: {state.state}</h3>
-               <h3  className ='s2'> cases: {state.cases}</h3>
-               <h3  className ='s3'> total Death: {state.deaths}</h3>
+               <h3 class="p-3 mb-2 bg-danger text-white" className ='s1'> state: {state.state}</h3>
+               <h3 class="p-3 mb-2 bg-dark text-white" className ='s2'> cases: {state.cases}</h3>
+               <h3 class="p-3 mb-2 bg-warning text-dark"   className ='s3'> total Death: {state.deaths}</h3>
                </ul>
                
                
