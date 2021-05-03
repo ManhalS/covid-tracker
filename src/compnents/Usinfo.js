@@ -18,13 +18,14 @@ function CoState(props) {
       console.log(CoState)
       const stateInfo = CoState?.map(state => { 
         return (
-            <div class ="row" >
+            <div class ="row"  >
             <Card>
+                <ul>
                <h3  className ='s1'> state: {state.state}</h3>
                <h3  className ='s2'> cases: {state.cases}</h3>
                <h3  className ='s3'> total Death: {state.deaths}</h3>
+               </ul>
                
-               <img src="/Covid-tracker-/covid-tracker/src/compnents/image/5295526.jpg" alt =""/>
                
                </Card>
 

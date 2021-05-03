@@ -5,7 +5,7 @@ import Gstatus from './compnents/Gstatus'
 import Searchbar from './compnents/Searchbar'
 import Usinfo from "./compnents/Usinfo"
 import v1 from "./compnents/video/v1.mp4"
- 
+ import Global from "./compnents/Global"
 function App() {
   return (
     <div className="App">
@@ -21,6 +21,7 @@ function App() {
      <Searchbar/>
      <Gstatus/>
      <Usinfo/>
+    <Global/>
      
     </div>
   );
